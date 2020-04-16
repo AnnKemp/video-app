@@ -3,15 +3,21 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-
-  useEffect(() => { // is gelijk aan componentDidMount() én componentDidUpdate()
-    // perform data fetching or call some other imperative API, hier moet ik dus mijn data gaan fetchen
+  useEffect(() => {
     document.title = `You clicked ${count} times`;
-    return function cleanup() { // is gelijk aan: componentWillUnmount() bij OOP
-      // hier komt de cleanup code
-    };
-  });
+  }, [count]); // Only re-run the effect if count changes // door die array toe te voegen wordt er niet onnodig heropgebouwd
 
+  const [isOnline, setIsOnline] = useState(null);
+  useEffect(() => {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+   // ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+   // return () => {
+    //  ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+   // };
+  }, //[props.friend.id] // Only re-subscribe if props.friend.id changes
+    );
   return (
       <div>
         <p>You clicked {count} times</p>

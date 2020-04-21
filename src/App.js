@@ -20,7 +20,15 @@ function App() {
     );
   return (
       <div>
-          <div id="box"></div>
+          <header>
+              <h1 id="title"></h1>
+              <video controls>
+                  <source src="" type="video/mp4" />
+                      Your browser does not support the video tag.
+              </video>
+              <p></p>
+          </header>
+          <main id="box"></main>
       </div>
   );
 }

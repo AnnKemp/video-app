@@ -12,15 +12,6 @@
              .then((data) => {
                  let gegevens=[];
                  gegevens[0]=(data.title);
-                 gegevens[1]=(data.overview);
-                 gegevens[2]=(data.poster_path);
-                 src="movie.mp4" // dus ik moet ergens die film vinden
-                 let titel=gegevens[0];
-                 let omschrijving=gegevens[1];
-                 let beeld=gegevens[2];
-                 document.getElementById("titel").innerText=titel;
-                 //document.getElementsByTagName("p")[0].innerText=omschrijving;
-                 //document.getElementById("myImg").src="https://image.tmdb.org/t/p/original/"+beeld;
              });*/
         fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=7e79f7263414fc6a1544c1a5e219faa6')
             .then((response) => {
@@ -35,6 +26,18 @@
                 document.getElementById("title").innerText=titel;
                 let text=gegevens.results[0].overview;
                 document.getElementsByTagName('p')[0].innerText=text;
+
+                // for the poster on the video
+                let place=document.getElementsByTagName('video')[0];
+                let att=document.createAttribute('poster');
+                att.value='https://image.tmdb.org/t/p/original'+gegevens.results[0].poster_path;
+                place.setAttributeNode(att);
+
+                // for the poster on the video
+               let movie=document.getElementsByTagName('source')[0]; // select the right element
+                let attrib=document.createAttribute('src'); // create the attribute
+                attrib.value=gegevens.results[0].video; // add the content to the attribute
+                movie.setAttributeNode(attrib); // put the attribute on the tag 'source'
 
                 // for the main with the movies
                 for (let i=1;i<=gegevens.results.length;i++)
@@ -178,7 +181,7 @@
 <header>
     <h1 id="title"></h1>
     <video controls>
-        <source src="" type="video/mp4">
+        <source type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <p></p>

@@ -33,7 +33,7 @@
                 att.value='https://image.tmdb.org/t/p/original'+gegevens.results[0].poster_path;
                 place.setAttributeNode(att);
 
-                // for the poster on the video
+                // for the video in the source  //  org/3/movies/get-movie-videos) endpoint or generic [movie](https://developers.themoviedb.org/3/movies/get-movie-details)… moet ik een nieuwe fetc op doen
                let movie=document.getElementsByTagName('source')[0]; // select the right element
                 let attrib=document.createAttribute('src'); // create the attribute
                 attrib.value=gegevens.results[0].video; // add the content to the attribute

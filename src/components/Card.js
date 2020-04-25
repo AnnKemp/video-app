@@ -6,7 +6,9 @@ export const Card = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=7e79f7263414fc6a1544c1a5e219faa6");
+            /* for a search query (met een form en inputveld ...) https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher */
+
+            const res = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=7e79f7263414fc6a1544c1a5e219faa6");
             const data = await res.json();
             setData(data);
             console.log(data.results[0]);
@@ -18,9 +20,9 @@ export const Card = () => {
         <div>
             <main id="box"></main>
             {
-                //   data.results.map(item => (
-                // <h1 key={item.id}>{item.original_title}</h1>
-                //  ))
+                 data.results.map(item => (
+                <h1 key={item.id}>{item.original_title}</h1>
+                  ))
             }
         </div>
     );

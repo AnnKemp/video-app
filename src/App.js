@@ -1,43 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-//import './components/Card.js';
-
-//import axios from 'axios'; // alleen nodig voor axios
+//import './components/Card.js';  // deze movies moeten in de map components op Card.js komen te staan
 
     function App() {
-    /*
-            for (let i=1;i<=data.results.length;i++)
-            {
-                var node = document.createElement("h1");
-                var textnode = document.createTextNode(data.results[i].title);
-                node.appendChild(textnode);
 
-                var node2 = document.createElement("details");
-                var node3 = document.createElement("summary");
-                var textnode3 = document.createTextNode("Movie description");
-                node3.appendChild(textnode3);
-                node2.appendChild(node3);
-                var textnode2 = document.createTextNode(data.results[i].overview);
-                node2.appendChild(textnode2);
-                var node4 = document.createElement("img");
-                // voor de foto
-                var bron = document.createAttribute("src");       // Create the "src" attribute
-                bron.value = 'https://image.tmdb.org/t/p/original'+data.results[i].poster_path;
-                node4.setAttributeNode(bron);                          // Add the src attribute to img
-                // make figure and add the elements
-                var node0 = document.createElement("figure");
-                node0.appendChild(node)
-                node0.appendChild(node4);
-                node0.appendChild(node2);
-                // dan alles in de grote box plakken
-                document.getElementById("box").appendChild(node0);
-            }
-*/
         const [data, setData] = useState({results: []});
 
         useEffect(() => {
             (async () => {
-                const res = await fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=7e79f7263414fc6a1544c1a5e219faa6");
+                const res = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=7e79f7263414fc6a1544c1a5e219faa6");
                 const data = await res.json();
                 setData(data);
                 console.log(data.results);
@@ -85,7 +56,10 @@ import './App.css';
         );
     }
  export default App;
-/*const useFetch = (url) => {
+/*
+
+// code voorbeelden van hoe ik data moet fetchen
+const useFetch = (url) => {
     const [data, setData] = useState(null);
     useEffect(() => {
         (async () => {

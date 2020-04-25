@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'; // dan zal ik moeten exporten of zo en dat via App.js tonen
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
-export function Card() {
+export const Card = () => {
     const [data, setData] = useState({results: []});
 
     useEffect(() => {
@@ -12,5 +12,16 @@ export function Card() {
             console.log(data.results[0]);
         })();
     }, []);
-    return data;
-    };
+
+    //return data;
+    return (
+        <div>
+            <main id="box"></main>
+            {
+                //   data.results.map(item => (
+                // <h1 key={item.id}>{item.original_title}</h1>
+                //  ))
+            }
+        </div>
+    );
+    }

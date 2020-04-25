@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import './components/Card.js';  // vinden hoe we dat binnenhalen
+//import './components/Card.js';
 
-import axios from 'axios';
+//import axios from 'axios'; // alleen nodig voor axios
 
     function App() {
-        //const [data, setData] = useState({results: []});
-
-      /*  useEffect(() => {// deze voor data fetching
-            axios
-                .get("https://api.themoviedb.org/3/movie/upcoming?api_key=7e79f7263414fc6a1544c1a5e219faa6")
-                .then(res => { //console.log(res)
-                 setData(res.data)
-                    console.log(data.results[0])
-                  }, []);
-            // for the movies
+    /*
             for (let i=1;i<=data.results.length;i++)
             {
                 var node = document.createElement("h1");
@@ -42,22 +33,56 @@ import axios from 'axios';
                 document.getElementById("box").appendChild(node0);
             }
 */
+        const [data, setData] = useState({results: []});
 
-            return (
-                <div>
-                    <header>
-                        <h1 id="title"></h1>
-
-                        <p></p>
-                    </header>
-                    <main id="box"></main>
+        useEffect(() => {
+            (async () => {
+                const res = await fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=7e79f7263414fc6a1544c1a5e219faa6");
+                const data = await res.json();
+                setData(data);
+                console.log(data.results);
+                for (let i=1;i<=data.results.length;i++)
                 {
-               //   data.results.map(item => (
-               // <h1 key={item.id}>{item.original_title}</h1>
-                  //  ))
-                    }
-                </div>
-            );
+                    var node = document.createElement("h1");
+                    var textnode = document.createTextNode(data.results[i].title);
+                    node.appendChild(textnode);
+
+                    var node2 = document.createElement("details");
+                    var node3 = document.createElement("summary");
+                    var textnode3 = document.createTextNode("Movie description");
+                    node3.appendChild(textnode3);
+                    node2.appendChild(node3);
+                    var textnode2 = document.createTextNode(data.results[i].overview);
+                    node2.appendChild(textnode2);
+                    var node4 = document.createElement("img");
+                    // voor de foto
+                    var bron = document.createAttribute("src");       // Create the "src" attribute
+                    bron.value = 'https://image.tmdb.org/t/p/original'+data.results[i].poster_path;
+                    node4.setAttributeNode(bron);                          // Add the src attribute to img
+                    // make figure and add the elements
+                    var node0 = document.createElement("figure");
+                    node0.appendChild(node)
+                    node0.appendChild(node4);
+                    node0.appendChild(node2);
+                    // dan alles in de grote box plakken
+                    document.getElementById("box").appendChild(node0);
+                }
+
+            })();
+        }, []);
+
+        //return data;
+        return (
+            <div>
+                <main id="box">
+              {/*
+                      data.results.map(item => (
+                    <h1 key={item.id}>{item.original_title}</h1>
+                     ))
+               */ }
+                </main>
+            </div>
+        );
     }
  export default App;
 /*const useFetch = (url) => {

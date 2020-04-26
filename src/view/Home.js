@@ -7,3 +7,11 @@ import App from './App';
 // de footer nog importeren
 import Upcoming from './upcoming';
 import Contact from './contact';
+import Header from './Header';
+
+function Home() {
+    return (
+        <Header />
+    );
+}
+export default Home;

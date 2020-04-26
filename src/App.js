@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-//import './components/Header.js;
+//import Home from "./view/Home";
+//import Nav from "./Components/nav";
 
-//import './components/Card.js';  // deze movies moeten in de map components op Card.js komen te staan
 
     function App() {
 
@@ -14,14 +14,16 @@ import './App.css';
                 const data = await res.json();
                 setData(data);
                 console.log(data.results); // test the outcome
-                // written in javascript to add the elements (make the movie-cards) + content dynamically via createElement en appendChild
+                // written in javascript to add the elements (make the movie-cards) + content dynamically via createElement and appendChild
 
                /* for (let i=1;i<=data.results.length;i++)
                 {
+                    // for the title
                     var node = document.createElement("h1");
                     var textnode = document.createTextNode(data.results[i].title);
                     node.appendChild(textnode);
 
+                    // for the text
                     var node2 = document.createElement("details");
                     var node3 = document.createElement("summary");
                     var textnode3 = document.createTextNode("Movie description");
@@ -29,17 +31,20 @@ import './App.css';
                     node2.appendChild(node3);
                     var textnode2 = document.createTextNode(data.results[i].overview);
                     node2.appendChild(textnode2);
+
                     var node4 = document.createElement("img");
-                    // voor de foto
+                    // for the picture
                     var bron = document.createAttribute("src");       // Create the "src" attribute
                     bron.value = 'https://image.tmdb.org/t/p/original'+data.results[i].poster_path;
                     node4.setAttributeNode(bron);                          // Add the src attribute to img
+
                     // make figure and add the elements
                     var node0 = document.createElement("figure");
                     node0.appendChild(node)
                     node0.appendChild(node4);
                     node0.appendChild(node2);
-                    // dan alles in de grote box plakken
+
+                    // paste the cards in the big box
                     document.getElementById("box").appendChild(node0);
                 }*/
 
@@ -48,7 +53,8 @@ import './App.css';
 
         //return data; // dit in Card.js steken samen met de fetch en dan in Home.js returnen in <main id="box"></main> tags
         return(
-        data.results.map(item => {
+
+        data.results.map(item => { // this way I can map all the needed elements instead of one (with two returns nested)
         return (
                 <figure>
                     <h1 key={item.id}>{item.original_title}</h1>

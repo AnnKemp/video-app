@@ -1,0 +1,1 @@
+/* for a search query (met een form en inputveld ...) https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher */

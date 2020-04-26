@@ -1,11 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 
 // die moet ik waarschijnlijk nog installeren: https://codeburst.io/getting-started-with-react-router-5c978f70df91
 // zie url  : voor uitleg
 function Header() {
     return (
-        <nav>
+       <p>Phone home</p>
+        /*<nav>
             <NavLink exact activeClassName="active" to="/">
                 Home
             </NavLink>
@@ -15,7 +16,7 @@ function Header() {
             <NavLink activeClassName="active" to="/contact">
                 Find movie
             </NavLink>
-        </nav>
+        </nav>*/
     );
 }
 export default Header;

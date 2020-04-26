@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+//import './components/Header.js;
+
 //import './components/Card.js';  // deze movies moeten in de map components op Card.js komen te staan
 
     function App() {
@@ -11,8 +13,10 @@ import './App.css';
                 const res = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=7e79f7263414fc6a1544c1a5e219faa6");
                 const data = await res.json();
                 setData(data);
-                console.log(data.results);
-                for (let i=1;i<=data.results.length;i++)
+                console.log(data.results); // test the outcome
+                // written in javascript to add the elements (make the movie-cards) + content dynamically via createElement en appendChild
+
+               /* for (let i=1;i<=data.results.length;i++)
                 {
                     var node = document.createElement("h1");
                     var textnode = document.createTextNode(data.results[i].title);
@@ -37,24 +41,26 @@ import './App.css';
                     node0.appendChild(node2);
                     // dan alles in de grote box plakken
                     document.getElementById("box").appendChild(node0);
-                }
+                }*/
 
             })();
         }, []);
 
-        //return data;
+        //return data; // dit in Card.js steken samen met de fetch en dan in Home.js returnen in <main id="box"></main> tags
+        return(
+        data.results.map(item => {
         return (
-            <div>
-                <main id="box">
-              {/*
-                      data.results.map(item => (
+                <figure>
                     <h1 key={item.id}>{item.original_title}</h1>
-                     ))
-               */ }
-                </main>
-            </div>
+                     <img src={"https://image.tmdb.org/t/p/original"+item.poster_path} />
+                     <details><summary>Movie description</summary>
+                         {item.overview}
+                     </details>
+                </figure>
         );
-    }
+    })
+        );
+}
  export default App;
 /*
 

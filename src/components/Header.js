@@ -3,20 +3,29 @@ import React from "react";
 
 // die moet ik waarschijnlijk nog installeren: https://codeburst.io/getting-started-with-react-router-5c978f70df91
 // zie url  : voor uitleg
+/*<nav> // dit is voor de navigatie maar misschien steek ik die nog appart // dit moet in de function Header komen bij in return
+        <NavLink exact activeClassName="active" to="/">
+            Home
+        </NavLink>
+        <NavLink activeClassName="active" to="/upcoming">
+            Upcoming movies
+        </NavLink>
+        <NavLink activeClassName="active" to="/contact">
+            Find movie
+        </NavLink>
+    </nav>*/
 function Header() {
     return (
-       <h1>Dit is de header </h1>
-        /*<nav> // dit is voor de navigatie maar misschien steek ik die nog appart
-            <NavLink exact activeClassName="active" to="/">
-                Home
-            </NavLink>
-            <NavLink activeClassName="active" to="/upcoming">
-                Upcoming movies
-            </NavLink>
-            <NavLink activeClassName="active" to="/contact">
-                Find movie
-            </NavLink>
-        </nav>*/
+    <header>
+        <h1 id="title"></h1>
+        <video controls>
+            <source type="video/mp4" />
+                Your browser does not support the video tag.
+        </video>
+        <p></p>
+    </header>
     );
 }
 export default Header;
+
+

@@ -48,6 +48,7 @@ img, details{
     text-align: end;
     padding:0;
 }
+em{margin-left:auto;width:90%; border:red solid 1px;} /* dit nog aanpassen */
 details{line-height: 24px;}
 img{ box-shadow: 1px 1px 5px #aaaaaa;}
 /*------------------------------------------ the header ------------------------------------------------*/

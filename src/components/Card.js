@@ -22,7 +22,7 @@ const Card = () => {
                     <details><summary>Movie description</summary>
                         {item.overview}
                     </details>
-                    <em>vote average: {item.vote_average}</em>
+                    <em>&#10031; {item.vote_average}</em>
                 </figure>
             );
         })

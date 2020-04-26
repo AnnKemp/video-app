@@ -18,12 +18,13 @@ export const Card = () => {
     //return data;
     return (
         <div>
-            <main id="box"></main>
+            <main id="box">
             {
                  data.results.map(item => (
                 <h1 key={item.id}>{item.original_title}</h1>
                   ))
             }
+            </main>
         </div>
     );
     }

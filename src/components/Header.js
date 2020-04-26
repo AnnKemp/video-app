@@ -1,5 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom"; // die moet ik waarschijnlijk nog installeren: https://codeburst.io/getting-started-with-react-router-5c978f70df91
+import { NavLink } from "react-router-dom";
+
+// die moet ik waarschijnlijk nog installeren: https://codeburst.io/getting-started-with-react-router-5c978f70df91
 // zie url  : voor uitleg
 function Header() {
     return (

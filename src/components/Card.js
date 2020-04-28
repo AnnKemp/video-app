@@ -19,10 +19,11 @@ const Card = () => {
                 <figure>
                     <h1 key={item.id}>{item.original_title}</h1>
                     <img src={"https://image.tmdb.org/t/p/original"+item.poster_path} />
+                    <em>&#10031; {item.vote_average}</em>
                     <details><summary>Movie description</summary>
                         {item.overview}
                     </details>
-                    <em>&#10031; {item.vote_average}</em>
+
                 </figure>
             );
         })

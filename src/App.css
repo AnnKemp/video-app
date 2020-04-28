@@ -19,6 +19,7 @@ body{
     font-family: sans-serif;
     padding:0;
     margin:0;
+    background-color: #666;
 }
 /* --------------- the main with the movies -------------------------------------------------------------------*/
 #box{
@@ -26,7 +27,7 @@ body{
     padding:0;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
 }
 /* ------------ the title, img, details for each movie -----------------------------------------------------*/
 figure{
@@ -34,7 +35,8 @@ figure{
     max-width:23%;
     margin:1%;
     padding:1% 3% 1% 1%;
-    box-shadow: 1px 1px 5px #aaaaaa;
+    box-shadow: 1px 1px 5px #333;
+    background-color: #aaaaaa;
 }
 h1{
     font-size: 3vw;
@@ -51,9 +53,48 @@ img, details{
 }
 em {margin-left:82%; width:46px; text-align: right; display: block;} /* movie rating */
 details{line-height: 24px;}
-img{ box-shadow: 1px 1px 5px #aaaaaa;}
-/*------------------------------------------ the header ------------------------------------------------*/
+img{ box-shadow: 1px 1px 5px #333;}
+/*------------------------------------------ the nav bar ------------------------------------------------*/
+nav {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    margin:0;
+    padding:0 0 0 10%;
+    box-shadow: 1px 1px 5px #aaaaaa;
+    position:fixed;
+    top:0;
+}
+nav form{
+    margin: 0 0 0 50%;
+}
+nav .invul{
+    height:2.7em;
+    padding:2px;
+}
+nav .knop{
+    font-size: 20px;
+    background: darkgray;
+    height: 1.7em;
+    border-radius: 50%;
+    border-style: hidden;
+}
 
+/* Style the navigation bar links */
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+nav a:hover{
+    text-shadow: 0 0 3px white;
+    letter-spacing: 0px;
+}
+/*--------------------------------- end nav bar --------------------------------------------------------*/
+/*--------------------------------- the header ------------------------------------------------------------*/
 header{
     box-sizing: border-box;
     width: 95%;
@@ -74,6 +115,7 @@ video{
     margin: 3% 4% 1% 0;
     width: 50%;
     height:400px;
+    box-shadow: 1px 1px 5px #aaaaaa;
 }
 p{
     text-align: left; width: 40%; margin-top:-297px; margin-left:-15%; line-height: 24px;
@@ -81,11 +123,12 @@ p{
 /*------------------------------------------- the footer -----------------------------------------------------------*/
 footer{
     min-height: 1em;
+    margin-bottom: 0;
 }
 footer p{
     text-align: center;
     width: 100%;
-    font-min-size: 7px;
+    font-min-size: 6px;
     line-height: 3.5em;
 }
 
@@ -106,8 +149,9 @@ footer p{
     }
     p{margin: 2% 0 2% 0;}
 }
+nav{ position: relative;}
 header{padding:0 0 0 5%;}
-#box{padding:0 0 0 4%; margin-right:0; align-items: stretch;}
+#box{padding:0 0 0 4%; margin-right:0;}
 video{margin-left:0;}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

@@ -10,8 +10,8 @@ import {
     Switch,
 } from 'react-router-dom'
 import Upcoming from "./components/upcoming/Upcoming";
-import Contact from "./contact";
-import Notfound from './notfound';
+import Contact from "./components/contact/Contact";
+import Notfound from './components/notfound';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,14 +25,14 @@ ReactDOM.render(
                       <NavLink activeClassName="active" to="/components/upcoming/Upcoming">Upcoming</NavLink>
                   </li>
                   <li>
-                      <NavLink activeClassName="active" to="/contact">Contact</NavLink>
+                      <NavLink activeClassName="active" to="/components/contact/Contact">Contact</NavLink>
                   </li>
               </ul>
               <Switch>
               <Route exact path="/" component={App} />
               <Route path="/components/upcoming/Upcoming" component={Upcoming} />
-              <Route path="/contact" component={Contact} />
-              <Route component={Notfound} />
+              <Route path="/components/contact/Contact" component={Contact} />
+              <Route path="/components/notfound" component={Notfound} />
               </Switch>
           </nav>
       </Router>

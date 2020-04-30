@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from "../components/Header";
+import Nav from "../components/Navigation";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-import Nav from "../components/Navigation";
 
 function Home() {
     return (

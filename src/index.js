@@ -16,7 +16,7 @@ import Notfound from './notfound';
 ReactDOM.render(
   <React.StrictMode>
       <Router>
-          <div>
+          <nav>
               <ul>
                   <li>
                       <NavLink activeClassName="active" to="/">Home</NavLink>
@@ -34,7 +34,7 @@ ReactDOM.render(
               <Route path="/contact" component={Contact} />
               <Route component={Notfound} />
               </Switch>
-          </div>
+          </nav>
       </Router>
   </React.StrictMode>,
   document.getElementById('root')

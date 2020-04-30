@@ -41,10 +41,9 @@ em {margin-left:82%; width:46px; text-align: right; display: block;} /* movie ra
 details{line-height: 24px;}
 img{ box-shadow: 1px 1px 5px #333;}
 /*------------------------------------------ the nav bar ------------------------------------------------*/
-nav { /* hier de css nog eens opkuisen en op punt zetten voor de form*/
-  display: flex;
-  align-items: center;
+ul { /* hier de css nog eens opkuisen en op punt zetten voor de form*/
   background-color: black;
+  display: flex;
   width: 100%;
   margin:0;
   padding:0 0 0 7%;
@@ -52,34 +51,33 @@ nav { /* hier de css nog eens opkuisen en op punt zetten voor de form*/
   position:fixed;
   top:0;
 }
+/* dit moet nog aangepast worden
 nav form{
   margin: 0 0 0 50%;
 }
-nav .invul{
+form .invul{
   height:2.7em;
   padding:2px;
 }
-nav .knop{
+form .knop{
   font-size: 20px;
   background: darkgray;
   height: 1.7em;
   border-radius: 50%;
   border-style: hidden;
-}
+}*/
 
 /* Style the navigation bar links */
-nav li a {
+ul li a{
   color: white;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
   list-style-type: none;
+  display: block;
 }
-nav li a:hover{
-  text-shadow: 0 0 3px white;
-  letter-spacing: 0px;
-}
+
 /*--------------------------------- end nav bar --------------------------------------------------------*/
 /*--------------------------------- the header ------------------------------------------------------------*/
 header{

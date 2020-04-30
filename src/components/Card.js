@@ -18,12 +18,11 @@ const Card = () => {
             return (
                 <figure>
                     <h1 key={item.id}>{item.original_title}</h1>
-                    <img src={"https://image.tmdb.org/t/p/original"+item.poster_path} />
+                    <img src={"https://image.tmdb.org/t/p/original"+item.poster_path} alt={item.original_title} />
                     <em>&#10031; {item.vote_average}</em>
                     <details><summary>Movie description</summary>
                         {item.overview}
                     </details>
-
                 </figure>
             );
         })

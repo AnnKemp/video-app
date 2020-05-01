@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom'
 import Upcoming from "./components/upcoming/Upcoming";
 import MyForm from "./components/upcoming/form";
-import Contact from "./components/contact/Contact";
+import Register from "./components/contact/Register";
 import Notfound from './components/notfound';
 
 ReactDOM.render(
@@ -26,14 +26,14 @@ ReactDOM.render(
                       <NavLink activeClassName="active" to="/components/upcoming/Upcoming">Upcoming</NavLink>
                   </li>
                   <li>
-                      <NavLink activeClassName="active" to="/components/contact/Contact">Contact</NavLink>
+                      <NavLink activeClassName="active" to="/components/contact/Register">Register</NavLink>
                   </li>
                 <MyForm />
               </ul>
               <Switch>
               <Route exact path="/" component={App} />
               <Route path="/components/upcoming/Upcoming" component={Upcoming} />
-              <Route path="/components/contact/Contact" component={Contact} />
+              <Route path="/components/contact/Register" component={Register} />
               <Route path="/components/notfound" component={Notfound} />
               </Switch>
           </nav>

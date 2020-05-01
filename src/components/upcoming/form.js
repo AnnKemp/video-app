@@ -7,7 +7,7 @@ const MyForm= () => {
 function handleClick(event) {
 setMovie(event.target.value);
  }
-// vanalles aan het missen en zo dus dat nog even uitpluizen
+// vanalles mis en zo dus dat nog even uitpluizen misschien moet dit ook Search gaan heten
 useEffect(() => {
     let postedValue=movie;
 

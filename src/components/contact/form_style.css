@@ -1,0 +1,14 @@
+#register{
+    margin: 6% auto 0 auto;
+    width: 70%;
+    min-height: 700px;
+}
+#register h3, p{
+    text-align: center;
+    width: 100%;
+}
+
+#register form{
+    margin: 25% auto 0 auto;
+    padding:0;
+}

@@ -136,7 +136,8 @@ footer p{
   font-min-size: 6px;
   line-height: 3.5em;
 }
-
+/*--------------------------------------------- end of the footer ------------------------------------------------*/
+/*---------------------------------------------  the form of contact ----------------------------------------------*/
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 1000px) {
   h1 {

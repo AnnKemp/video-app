@@ -10,6 +10,7 @@ import {
     Switch,
 } from 'react-router-dom'
 import Upcoming from "./components/upcoming/Upcoming";
+import MyForm from "./components/upcoming/form";
 import Contact from "./components/contact/Contact";
 import Notfound from './components/notfound';
 
@@ -27,7 +28,7 @@ ReactDOM.render(
                   <li>
                       <NavLink activeClassName="active" to="/components/contact/Contact">Contact</NavLink>
                   </li>
-                  <form method="get" action="view/Results.js"><input type="text" placeholder="Search your movie here" className="complete" /><input type="submit" className="send overlay" value="" /></form>
+                <MyForm />
               </ul>
               <Switch>
               <Route exact path="/" component={App} />

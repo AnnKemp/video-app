@@ -5,6 +5,8 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [age, setAge] = useState(null);
 // de bedoeling van dit gedoe is om de gegevens te registreren in mijn zelfgemaakte API en dan te gebruiken om in te loggen
+    // en dus de keuze te geven tussen inloggen of registreren en een inlog-venster te maken . . .
+    // maar ik ga eerst die movie search oplossen
 
     function mySubmitHandler(event){
         event.preventDefault();

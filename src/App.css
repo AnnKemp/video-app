@@ -50,6 +50,7 @@ ul { /* hier de css nog eens opkuisen en op punt zetten voor de form*/
   box-shadow: 1px 1px 5px #aaaaaa;
   position:fixed;
   top:0;
+  z-index: 999;
 }
 
 nav form{
@@ -121,6 +122,7 @@ video{
   width: 50%;
   height:400px;
   box-shadow: 1px 1px 5px #aaaaaa;
+  z-index: 5;
 }
 p{
   text-align: left; width: 40%; margin-top:-297px; margin-left:-15%; line-height: 24px;

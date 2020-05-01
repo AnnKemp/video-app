@@ -22,7 +22,6 @@ function MyForm {
     }
 }
 
-
 const postedValue='';
 
 if(postedValue==true)
@@ -33,7 +32,8 @@ if(postedValue==true)
         /* for a search query (met een form en inputveld ...) https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher */
         useEffect(() => {
             (async () => {
-                const res = await fetch("https://api.themoviedb.org/3/search/movie?api_key=7e79f7263414fc6a1544c1a5e219faa6&query=postedValue");
+                const res = await fetch("https://api.themoviedb.org/3/search/movie?api_key=7e79f7263414fc6a1544c1a5e219faa6&language=en-UK&include_adult=true&query=postedValue");
+
                 const data = await res.json();
                 setData(data);
                 console.log(data.results); // test the outcome

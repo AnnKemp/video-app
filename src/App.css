@@ -51,21 +51,41 @@ ul { /* hier de css nog eens opkuisen en op punt zetten voor de form*/
   position:fixed;
   top:0;
 }
-/* dit moet nog aangepast worden
+
 nav form{
   margin: 0 0 0 50%;
+  height:3em;
+  width:16em;
 }
-form .invul{
+form .complete{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
   height:2.7em;
-  padding:2px;
+  padding:0.15em;
+  margin-top: 7px;
+  float:left;
 }
-form .knop{
-  font-size: 20px;
-  background: darkgray;
-  height: 1.7em;
-  border-radius: 50%;
-  border-style: hidden;
-}*/
+form .send{
+  font-size:1em;
+  background:white;
+  height:2.1em;
+  width:2.1em;
+  border-radius:50%;
+  border-style: ridge;
+  margin-left: 10px;
+  margin-top: 7px;
+  margin-bottom: 0;
+  display: inline;
+  position: relative;
+  float:left;
+
+  background-image: url("images/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-color: white;
+}
 
 /* Style the navigation bar links */
 ul li a{

@@ -27,6 +27,7 @@ ReactDOM.render(
                   <li>
                       <NavLink activeClassName="active" to="/components/contact/Contact">Contact</NavLink>
                   </li>
+                  <form method="get" action="view/Results.js"><input type="text" placeholder="Search your movie here" className="complete" /><input type="submit" className="send overlay" value="" /></form>
               </ul>
               <Switch>
               <Route exact path="/" component={App} />

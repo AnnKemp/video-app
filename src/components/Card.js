@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CardView from "./CardView";
 
 const Card = () => {
     const [data, setData] = useState({results: []});
@@ -11,29 +12,12 @@ const Card = () => {
             console.log(data.results); // test the outcome
         })();
     }, []);
-
     //return data;
-    return(
-        data.results.map(item => { // this way I can map all the needed elements instead of one (with two returns nested)
-            return (
-                <figure>
-                    <h1 key={item.id}>{item.original_title}</h1>
-                    <img src={"https://image.tmdb.org/t/p/original"+item.poster_path} alt={item.original_title} />
-                    <em>&#10031; {item.vote_average}</em>
-                    <details><summary>Movie description</summary>
-                        {item.overview}
-                    </details>
-                </figure>
-            );
-        })
+    return( // nog eens even checken hoe ik de data van de state hier het beste mee geef als 'props'
+        <CardView data={data} />
     );
 }
 export default Card;
-
-
-
-
-
 
 /*
 

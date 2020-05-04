@@ -28,6 +28,8 @@ const MyForm= () => {
                     .then(data => {
                         console.log('Success:', data);
                         setData(data);
+                        window.location.replace("Results.js"); // maar return ik die gegevens dan wel? en mag dit in React?
+                        // kan ik direct return data   doen?
                         return foundMovies=data; // ok data gevonden en er uit gehaald nu nog ze kunnen doorsturen om ze te tonen op een andere pagina
                     })
             }else{}

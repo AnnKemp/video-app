@@ -15,18 +15,22 @@ const MyForm= () => {
       Search();
     }
    // "https://api.themoviedb.org/3/search/movie/?api_key=67b347978ffe14fc5d6f8a664a1829f2&query=" // dit is de juiste query
+
     const Search=() => {
             alert(film);
             if(movie!=="") {
             const url = "https://api.themoviedb.org/3/search/movie/?api_key=67b347978ffe14fc5d6f8a664a1829f2&query=";
-            let total = url +film;
+            let total = url+film;
+
+             let foundMovies;
+
                 fetch(total)
                     .then(response => response.json())
                     .then(data => {
                         console.log('Success:', data);
+                        setData(data);
+                        return foundMovies=data; // ok data gevonden en er uit gehaald nu nog ze kunnen terugsturen om ze te tonen
                     })
-                    // nu nog vinden hoe ik die data moet opvangen in een let om die via setdate  in de state te steken
-                setData(data);
             }else{}
     }
         return (
@@ -35,6 +39,5 @@ const MyForm= () => {
                     <button className="send" onClick={mySubmitHandler}></button>
             </form>
         );
-
 }
 export default MyForm;

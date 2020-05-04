@@ -7,7 +7,7 @@ const MyForm= () => {
     let film=""; // initiating let film
     let foundMovies;
 
-    function myChangeHandler(event) { // if type something in the input-field
+    function myChangeHandler(event) { // if you type something in the input-field
         setMovie(event.target.value);
     }
 
@@ -28,7 +28,7 @@ const MyForm= () => {
                     .then(data => {
                         console.log('Success:', data);
                         setData(data);
-                        return foundMovies=data; // ok data gevonden en er uit gehaald nu nog ze kunnen terugsturen om ze te tonen op een andere pagina
+                        return foundMovies=data; // ok data gevonden en er uit gehaald nu nog ze kunnen doorsturen om ze te tonen op een andere pagina
                     })
             }else{}
     }

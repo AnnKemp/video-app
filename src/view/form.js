@@ -5,7 +5,6 @@ const MyForm= () => {
     const [data, setData] = useState({results: []}); // here comes the data from the api-search
 
     let film=""; // initiating let film
-    let foundMovies;
 
     function myChangeHandler(event) { // if you type something in the input-field
         setMovie(event.target.value);
@@ -16,8 +15,6 @@ const MyForm= () => {
       film=movie;
       Search();
     }
-   // "https://api.themoviedb.org/3/search/movie/?api_key=67b347978ffe14fc5d6f8a664a1829f2&query=" // dit is de juiste query
-
     const Search=() => {
             if(movie!=="") {
             const url = "https://api.themoviedb.org/3/search/movie/?api_key=67b347978ffe14fc5d6f8a664a1829f2&query=";
@@ -26,11 +23,11 @@ const MyForm= () => {
                 fetch(total)
                     .then(response => response.json())
                     .then(data => {
-                        console.log('Success:', data);
+                       console.log(data);
                         setData(data);
-                        window.location.replace("Results.js"); // maar return ik die gegevens dan wel? en mag dit in React?
-                        // kan ik direct return data   doen?
-                        return foundMovies=data; // ok data gevonden en er uit gehaald nu nog ze kunnen doorsturen om ze te tonen op een andere pagina
+                        // hier kan ik eigenlijk de Search() functie aanroepen die deel is van MyForm maar dan niet in de html maar daarboven in de javascript code nog even opzoeken hoe ik dat moet doen   misschien via local memory of anders moet ik hogerop naar index.js
+
+                        return data; // ok data gevonden en er uit gehaald nu nog ze kunnen doorsturen om ze te tonen op een andere pagina
                     })
             }else{}
     }

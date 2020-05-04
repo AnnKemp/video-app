@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import CardView from ".../CardView";
-import Search from "form";
+import CardView from "../components/CardView";
+import Search from "./form";
 
 const Results = () => {
-        //return data;
-    let data= {Search}
-    // nog eens check of dit werkt
+    let data= {Search};
+    console.log(data); // dit werkt dus niet, het was de log van de form.js die ik op deze pagina te zien kreeg in de log
+
         return (
             <main id="box" style={{marginTop:"55px"}}><CardView data={data} /></main>
         );

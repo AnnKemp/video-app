@@ -49,7 +49,6 @@ ul {
   width: 30%;
   margin:0;
   padding:0 0 0 3%;
-  /*border:red solid 1px;*/
 }
 nav{
   box-shadow: 1px 1px 5px #aaaaaa;
@@ -59,13 +58,11 @@ nav{
   z-index: 999;
   background-color: black;
 }
-nav form{
-  margin-right:0;
-  height:3em;
-  min-width:70%;
-  border:red solid 1px;
-  position: relative;
-  float: right;
+nav form {
+  height: 3em;
+  min-width: 236px;
+  position: absolute;
+  right: 15px;
 }
 nav form .complete{
   position: relative;
@@ -78,7 +75,6 @@ nav form .complete{
 }
 nav form .send{
   font-size:1em;
-  background:white;
   height:2.1em;
   width:2.1em;
   border-radius:50%;

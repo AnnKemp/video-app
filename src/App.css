@@ -60,10 +60,12 @@ nav{
   background-color: black;
 }
 nav form{
-  margin: 0 0 0 0;
+  margin-right:0;
   height:3em;
-  width:16em;
+  min-width:70%;
   border:red solid 1px;
+  position: relative;
+  float: right;
 }
 nav form .complete{
   position: relative;
@@ -177,8 +179,8 @@ video{margin-left:0;}
     font-size: 9vw;
   }
   figure, #title, video, p {
-    flex: 100%;
-    max-width: 100%;
+    flex: 90%;
+    max-width: 90%;
   }
   nav form{
     margin: 0 0 0 0;

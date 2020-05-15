@@ -10,7 +10,7 @@ import {
     Switch,
 } from 'react-router-dom'
 import Upcoming from "./components/upcoming/Upcoming";
-import MyForm from "./view/form";
+import MyForm from "./components/Search";
 import Register from "./components/contact/Register";
 import Notfound from './components/notfound';
 

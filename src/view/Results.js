@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardView from "../components/CardView";
-import Search from "./form";
+import Search from "../components/Search";
 
 const Results = () => {
     let data= {Search};

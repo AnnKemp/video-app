@@ -43,22 +43,27 @@ em {margin-left:82%; width:46px; text-align: right; display: block;} /* movie ra
 details{line-height: 24px;}
 img{ box-shadow: 1px 1px 5px #333;}
 /*------------------------------------------ the nav bar ------------------------------------------------*/
-ul { /* hier de css nog eens opkuisen en op punt zetten voor de form*/
-  background-color: black;
+
+ul {
   display: flex;
-  width: 100%;
+  width: 30%;
   margin:0;
-  padding:0 0 0 7%;
+  padding:0 0 0 3%;
+  /*border:red solid 1px;*/
+}
+nav{
   box-shadow: 1px 1px 5px #aaaaaa;
   position:fixed;
+  height: 3.1em;
   top:0;
   z-index: 999;
+  background-color: black;
 }
-
 nav form{
-  margin: 0 0 0 50%;
+  margin: 0 0 0 0;
   height:3em;
   width:16em;
+  border:red solid 1px;
 }
 nav form .complete{
   position: relative;
@@ -163,7 +168,7 @@ footer p{
 nav{ position: relative;}
 
 header{padding:0 0 0 5%; margin-top: 5%;}
-#box{padding:0 0 0 4%; margin-right:0; }
+#box{padding:0 0 0 0; margin-right:0; }
 video{margin-left:0;}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

@@ -13,7 +13,7 @@ const Upcoming = () =>{
         }, []);
         return(
             <div>
-            <main id="box" style={{marginTop:"55px"}}><CardView data={data} /></main>
+            <main id="box" style={{marginTop:"35px"}}><CardView data={data} /></main>
             <Footer />
             </div>
     );

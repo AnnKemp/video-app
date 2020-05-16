@@ -5,12 +5,14 @@ body{
   font-family: sans-serif;
   padding:0;
   margin:0;
+  font-size: 1em;
   background-color: #666;
 }
 /* --------------- the main with the movies -------------------------------------------------------------------*/
-main#box{
-  margin:0 0 0 0;
-  padding:0 3%;
+div main#box{
+  margin:0;
+  padding:0% 2%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -106,30 +108,45 @@ nav ul li a{
 
 /*--------------------------------- end nav bar --------------------------------------------------------*/
 /*--------------------------------- the header ------------------------------------------------------------*/
-header{
+div header{
   box-sizing: border-box;
-  width: 95%;
-  min-height:500px;
+  width: 100%;
+  min-height: 500px;
+  max-height: 100%;
   padding-right:2%;
-  margin: 3% 0 1% 0;
+  padding-left:0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   flex-flow: row-reverse wrap;
+
 }
-#title {
-  margin:3% 0 0 0;
+h1#title {
+  margin:7% 0 0 60%;
   text-align: left;
-  width: 40%;
+  width: 44%;
+  height: 100%;
 }
 video{
-  margin: 3% 4% 1% 0;
+  margin:0;
+  margin-right:4%;
   width: 50%;
   height:400px;
   box-shadow: 1px 1px 5px #aaaaaa;
   z-index: 5;
+  position: absolute;
+  left:5%;
+  top:100px;
 }
-p{
-  text-align: left; width: 40%; margin-top:-297px; margin-left:35%; line-height: 24px;
+p{ box-sizing: border-box;
+    text-align: left;
+    width: 40%;
+  height: 100%;
+  padding:0;
+  margin-top:-160px;
+  margin-left:33%;
+  line-height: 24px;
+
 }
 /*------------------------------------------- the footer -----------------------------------------------------------*/
 footer{
@@ -150,41 +167,102 @@ footer p{
 @media (max-width: 1000px) {
   h1 {
     font-size: 5vw;
+    margin:0;
+  }
+  header{
+    display: flex;
+    flex-direction: column;
+    padding:0 0 0 5%;
+    margin-top: 5%;
+    min-height: 800px;
+    max-height: 100%;
   }
   figure {
     flex: 46%;
     max-width: 46%;
     margin-bottom: 2%;
-    margin-right: 2%;
+    margin-right: 3%;
   }
-  #title, video, p{
-    flex: 96%;
-    min-width: 96%;
+  h1#title, video, p{
+    flex: 92%;
+    width: 92%;
   }
-  p{margin: 2% 0 2% 0;}
+  h1#title{
+    margin-left:5%;
+    margin-top:2%;
+  }
+  video{
+    top:120px;
+    margin-left:0;
+    margin-right:0;
+    height:350px;
+  }
+  header p{
+    margin: 350px 0 2% 5%;
+    text-align: left;
+  }
 }
 nav{ position: relative;}
 
-header{padding:0 0 0 5%; margin-top: 5%;}
-#box{padding:0 0 0 0; margin-right:0; }
-video{margin-left:0;}
+main#box{
+  padding-left:2%;
+  margin-right:0;
+  margin-left:2%;
+  margin-top: 10%;
+}
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
   h1 {
     font-size: 9vw;
   }
-  figure, #title, video, p {
-    flex: 90%;
-    max-width: 90%;
-  }
   nav form{
     margin: 0 0 0 0;
   }
-  #title, video, p{min-width: 100%;}
-  #box, header{padding:0 2% 2% 2%;}
-  header{margin: 5% 0 2% 2%;}
-  figure{padding-top: 3%; margin-bottom: 4%;}
-  #box{margin-right:0; padding-bottom:2%; align-items: stretch;}
-  p{text-align: justify;}
+  #title, video, p, figure {
+    min-width: 90%;
+    flex: 90%;
+  }
+  h1#title, header p{
+    text-align: left;
+    margin-left:5%;
+    height: 100%;
+  }
+  header{
+    padding:0 2% 2% 2%;
+    margin: 0 0 2% 2%;
+    min-height: 100px;
+  }
+  figure {
+    padding-top: 3%;
+    margin-bottom: 4%;
+    margin-right: 0;
+    margin-left:0;
+  }
+  figure details{
+    font-size: 0.8em;
+    color:#ccc;
+    font-weight: bold;
+  }
+  video{
+    height: 300px;
+  }
+  main#box{
+    padding-right:0;
+    padding-left:2%;
+    padding-bottom:2%;
+    margin-right:0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  header p {
+    text-align: justify;
+    margin-top: 250px;
+  }
+  footer {
+    margin-top:-0.5em;
+  }
 }

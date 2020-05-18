@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-const Header = () => {
+const Header = (props) => {
 
         const [data, setData] = useState({results: []});
 
@@ -9,15 +9,12 @@ const Header = () => {
                 const res = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=7e79f7263414fc6a1544c1a5e219faa6");
                 const data = await res.json();
                 setData(data);
-                console.log(data.results); // test the outcome
-                let gegevens=[];
-                gegevens=data;
-                console.log(gegevens);
+                console.log(data);// test the outcome
             })();
         }, []);
     return (
     <header>
-        <h1 id="title">De titel</h1>
+        <h1 id="title">{data.results[0]}</h1>
         <video controls>
             <source type="video/mp4" />
                 Your browser does not support the video tag.
@@ -29,7 +26,6 @@ const Header = () => {
 }
 export default Header;
 /*
-
 <h1 key={item.id}>{item.original_title}</h1>
   <h1 id="title">{data.results[0].original_title}</h1>
 <img src={"https://image.tmdb.org/t/p/original"+item.poster_path} alt={item.original_title} />

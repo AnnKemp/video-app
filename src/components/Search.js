@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
+
+// create the context hook
+export const movieContext= createContext();
 
 const MyForm= () => {
     const [movie, setMovie] = useState(""); // here comes the value from the input-field
@@ -25,9 +28,8 @@ const MyForm= () => {
                     .then(data => {
                        console.log(data);
                         setData(data);
-                        // hier kan ik eigenlijk de Search() functie aanroepen die deel is van MyForm maar dan niet in de html maar daarboven in de javascript code nog even opzoeken hoe ik dat moet doen   misschien via local memory of anders moet ik hogerop naar index.js
-
-                        return data; // ok data gevonden en er uit gehaald nu nog ze kunnen doorsturen om ze te tonen op een andere pagina
+                        // adding the data to the movieContext via de provider
+                        return <movieContext.Provider value={data} />; // twijfel eraan of ik dat zo kan schrijven
                     })
             }else{}
     }

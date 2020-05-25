@@ -1,7 +1,6 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 
-// create the context hook
-export const movieContext= createContext();
+export const movieContext= createContext(); // step 1: create the context hook
 
 const MyForm= () => {
     const [movie, setMovie] = useState(""); // here comes the value from the input-field
@@ -40,5 +39,4 @@ const MyForm= () => {
             </form>
         );
 }
-
 export default MyForm;

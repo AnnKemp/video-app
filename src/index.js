@@ -21,7 +21,7 @@ ReactDOM.render(
           <nav>
               <ul>
                   <li>
-                      <NavLink activeClassName="active" to="/">Home</NavLink>
+                      <NavLink activeClassName="active" to="/video-app">Home</NavLink>
                   </li>
                   <li>
                       <NavLink activeClassName="active" to="/components/upcoming/Upcoming">Upcoming</NavLink>
@@ -30,7 +30,7 @@ ReactDOM.render(
                 <MyForm />
               </ul>
               <Switch>
-              <Route exact path="/" component={App} />
+                  <Route exact path="/video-app" component={App} />
               <Route path="/components/upcoming/Upcoming" component={Upcoming} />
               <Route path="/components/contact/Register" component={Register} />
               <Route path="/components/notfound" component={Notfound} />
@@ -41,7 +41,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
 /*  <li>
    <NavLink activeClassName="active" to="/components/contact/Register">Register</NavLink> // voor als ik dat formulier terug ga bijvoegen
    </li> */

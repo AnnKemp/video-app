@@ -25,10 +25,9 @@ const MyForm= () => {
                 fetch(total)
                     .then(response => response.json())
                     .then(data => {
-                       console.log(data);
                         setData(data);
-                        // adding the data to the movieContext via de provider
-                        return <movieContext.Provider value={data} />; // twijfel eraan of ik dat zo kan schrijven
+                        // adding the data to the movieContext via Provider
+                        return <movieContext.Provider value={data} />; // step 2: add data to the context hook
                     })
             }else{}
     }
@@ -39,4 +38,8 @@ const MyForm= () => {
             </form>
         );
 }
+function useMovieContext(){
+    return useContext(movieContext); // step 3: get data out of the context hook
+}
+export { useMovieContext, MyForm };
 export default MyForm;

@@ -34,4 +34,9 @@ npm install -g @ionic/cli native-run cordova-res
 
 The -g option means install globally. When packages are installed globally, EACCES permission errors can occur.
 
-Consider setting up npm to operate globally without elevated permissions. See Resolving Permission Errors for more information.
+Consider setting up npm to operate globally without elevated permissions. 
+
+When I installed it permission-errors did occur and you can't solve them with 'sudo', not at all!
+So the solution I found is the next:
+
+

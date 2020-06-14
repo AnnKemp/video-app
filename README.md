@@ -19,8 +19,8 @@ Photo Gallery functionality powered by the Capacitor Camera, Filesystem, and Sto
 ## Download required tools
 Download and install these right away to ensure an optimal Ionic development experience:
 
-Node.js for interacting with the Ionic ecosystem. Download the LTS version here.
-A code editor for... writing code! We are fans of Visual Studio Code.
+Node.js for interacting with the Ionic ecosystem. Download the LTS version here (google LTS! It's important!).
+A code editor for... writing code! If you don't have PHPStorm you can use Visual Studio Code.
 Command-line interface/terminal (CLI):
 Windows users: for the best Ionic experience, we recommend the built-in command line (cmd) or the Powershell CLI, running in Administrator mode.
 Mac/Linux users, virtually any terminal will work.
@@ -28,7 +28,7 @@ Mac/Linux users, virtually any terminal will work.
 ## Install Ionic tooling
 Run the following in the command line terminal to install the Ionic CLI (ionic), native-run, used to run native binaries on devices and simulators/emulators, and cordova-res, used to generate native app icons and splash screens:
 
-To open a terminal in Visual Studio Code, go to Terminal -> New Terminal. The code in terminal:
+To open a terminal in Visual Studio Code, go to Terminal -> New Terminal. The code in your terminal:
 
 npm install -g @ionic/cli native-run cordova-res
 
@@ -61,5 +61,32 @@ New terminals will now use the nvm-controlled NodeJS. To verify:
 
 node -v  # will print the version installed abovewhich npm  # will print a path somewhere within the ~/.nvm folder
 Global packages will now be installed in the ~/.nvm directory, so permission errors should no longer occur as long as npm is used without sudo.
+
+## Create an App
+Next, create an Ionic Angular app that uses the “Tabs” starter template and adds Capacitor for native functionality, type the following code into your terminal:
+
+ionic start photo-gallery tabs --type=angular --capacitor
+
+This project comes with three pre-built pages and with common building blocks already in place, we are going to add more features and make a wonderfull functioning app!
+
+Next, go to the app folder, with the following terminal code:
+
+cd photo-gallery
+
+## Put your app online on GITHUB
+First make a repository on your GitHub (online) and name it: 'photo-gallery'.
+
+Then locally, on your computer:
+If you are in your photo-gallery folder, type the following code into your terminal:
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:YourName/photo-gallery.git
+git push -u origin master
+
+Now test if your app is online and wait for my further instructions to guide you through the process of building this app.
+If you got so far on your own, I should say: well done! :) and see you online! ;) 
+
 
 

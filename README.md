@@ -45,8 +45,6 @@ Using sudo with npm is not recommended because it can lead to further complicati
 
 The best way to avoid permission issues is to reinstall NodeJS and npm using a node version manager.
 
-This guide will document nvm installation and usage. See the nvm docs for full documentation. See the npm docs for additional options and instructions for Windows.
-
 Install nvm.
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash

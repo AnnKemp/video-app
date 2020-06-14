@@ -37,6 +37,31 @@ The -g option means install globally. When packages are installed globally, EACC
 Consider setting up npm to operate globally without elevated permissions. 
 
 When I installed it permission-errors did occur and you can't solve them with 'sudo', not at all!
-So the solution I found is the next:
+So here's the solution I found:
+
+EACCES permission errors can occur when packages are installed globally. If this is the case, npm may need to be set up to operate without elevated permissions.
+
+Using sudo with npm is not recommended because it can lead to further complications.
+
+The best way to avoid permission issues is to reinstall NodeJS and npm using a node version manager.
+
+This guide will document nvm installation and usage. See the nvm docs for full documentation. See the npm docs for additional options and instructions for Windows.
+
+Install nvm.
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+New terminals will now use nvm. To verify, open a new terminal and run the following. If something prints, the installation was successful.
+
+command -v nvm
+To download and install the latest LTS release of NodeJS, run:
+
+nvm install --lts
+Set the newly installed NodeJS as the default environment:
+
+nvm alias default lts/*
+New terminals will now use the nvm-controlled NodeJS. To verify:
+
+node -v  # will print the version installed abovewhich npm  # will print a path somewhere within the ~/.nvm folder
+Global packages will now be installed in the ~/.nvm directory, so permission errors should no longer occur as long as npm is used without sudo.
 
 
